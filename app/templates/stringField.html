@@ -1,0 +1,4 @@
+<div class="form-group" ng-class="{'has-error': formState[field].$invalid}">
+  <label for="{{field}}" class="control-label">{{schema.title}}</label>
+  <input id="{{field}}" ng-attr-name="{{field}}" ng-model="model[field]" type="text" class="form-control"></input>
+</div>

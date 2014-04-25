@@ -1,0 +1,4 @@
+<div class="form-group">
+  <label for="{{field}}">{{schema.title}}</label>
+  <select id="{{field}}" name="{{field}}" ng-model="model[field]" ng-options="enumValue for enumValue in schema.enum"></select>
+</div>

@@ -1,0 +1,21 @@
+{
+  "name": "schema-form",
+  "version": "0.0.1",
+  "main": "dist/schema-form.js",
+  "ignore": [
+    "app",
+    "config",
+    "spec",
+    "tasks",
+    ".travis.yml",
+    "Gruntfile.js",
+    "main.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": "*"
+  },
+  "devDependencies": {
+    "angular-mocks": "*"
+  }
+}
