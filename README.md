@@ -3,7 +3,10 @@
 ##Simple form building for angular.
 
 Schema form provides a couple directives for building forms
-given a json schema. `schema-form-fields` takes 3 attributes:
+given a [json schema](json-schema.org).
+
+`<schema-form-fields>` can be used as an element or attribute and
+takes 3 attributes:
 
 * schema
 * model
