@@ -24,4 +24,4 @@ We aim to support:
 and eventually
 * link relations
 
-This directive outputs twitter bootstrap compatible markup. A demo is here.
+This directive outputs twitter bootstrap compatible markup. A [demo](http://gaslight.github.io/angular-schema-form/) is here.
