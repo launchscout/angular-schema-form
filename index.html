@@ -54,7 +54,18 @@
 
       <div class="starter-template" ng-controller="ExampleCtrl">
         <h1>Schema Form Example</h1>
-        {{model | json}}
+        <h3>Schema</h3>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            {{schema | json}}
+          </div>
+        </div>
+        <h3>Result</h3>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            {{model | json}}
+          </div>
+        </div>
         <form name="example" role="form">
           <schema-form-fields fields="fields" schema="schema" model="model"></schema-form-fields>
         </form>
@@ -67,7 +78,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="vendor/bower/angular/angular.js"></script>
-    <script src="generated/js/app.js"></script>
+    <script src="dist/schema-form.js"></script>
     <script src="example.js"></script>
   </body>
 </html>
