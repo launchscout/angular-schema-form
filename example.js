@@ -20,6 +20,7 @@ app.controller("ExampleCtrl", function($scope) {
     },
     required: ["title"]
   }
+  $scope.fields = ["title", "level", "good"]
   $scope.model = {
     title: "Uncle John's Bathroom Reader",
     good: false

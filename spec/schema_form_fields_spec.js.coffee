@@ -16,10 +16,11 @@ describe "schemaFormFields directive", ->
     @scope.model =
       title: "Crime and Punishment"
       author: "Dostoyevsky"
+    @scope.fields = ["title", "author"]
     @compile = $compile
     @template = """
   <form name="test">
-    <div schema-form-fields schema='schema' model='model'></div>
+    <div schema-form-fields schema='schema' fields='fields' model='model'></div>
   </form>
 """
     @element = @compile(@template)(@scope);
@@ -27,4 +28,4 @@ describe "schemaFormFields directive", ->
   )
 
   it "should render labels for properties", ->
-    expect(@element.find("label").html()).toMatch /Author/
+    expect(@element.find("label").html()).toMatch /Title/
