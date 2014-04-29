@@ -13,7 +13,7 @@ describe "schemaFormField directive", ->
     @compile = $compile
     @template = """
   <form name="test">
-    <div schema-form-field schema='schema' field='field' model='model'></div>
+    <div schema-form-field schema='schema' field='field' model='model' required='required'></div>
   </form>
 """
     @buildField = ->
@@ -28,6 +28,20 @@ describe "schemaFormField directive", ->
       expect(@element.find("label").html()).toMatch /Title/
     it "should have inputs", ->
       expect(@element.find("input").val()).toMatch /Crime/
+
+  describe "pattern validation", ->
+    beforeEach ->
+      @scope.schema.pattern = "^[A-Z]"
+      @buildField()
+    it "should add ng-required", ->
+      expect(@element.find("input").attr("ng-pattern")).toEqual("/^[A-Z]/")
+
+  describe "required field", ->
+    beforeEach ->
+      @scope.required = true
+      @buildField()
+    it "should add ng-required", ->
+      expect(@element.find("input").attr("ng-required")).toBeDefined()
 
   describe "fields with enums", ->
     beforeEach ->
