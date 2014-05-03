@@ -3,7 +3,7 @@ var app = angular.module("app", ["schemaForm"]);
 app.controller("ExampleCtrl", function($scope) {
   $scope.schema =
 {
-  title: "Thing"
+  title: "Thing",
   type: "object",
   properties: {
     title: {
