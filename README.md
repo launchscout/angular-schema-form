@@ -18,13 +18,12 @@ So far, we support the following json schema types:
 * boolean
 * enum
 * required
-
-We aim to support:
 * number
-* format date-time
 * pattern
 
-and eventually
+We aim to eventually support:
+
+* format date-time
 * link relations
 
 This directive outputs twitter bootstrap compatible markup. A [demo](http://gaslight.github.io/angular-schema-form/) is here.

@@ -15,6 +15,7 @@ angular.module("schemaForm").directive "schemaFormField", ($compile, $templateCa
     else
       $templateCache.get("#{scope.schema.type}Field.html")
     element.html template
+    element.find("input").attr("type", "number") if (scope.schema.type == "number" or (scope.schema.type == "integer")
     element.find("input").attr("ng-required", scope.required)
     element.find("input").attr("ng-pattern", "/#{scope.schema.pattern}/") if scope.schema.pattern
     element.find("input").attr("name", scope.field)
