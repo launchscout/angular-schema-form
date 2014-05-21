@@ -18,7 +18,7 @@ angular.module("schemaForm").directive "schemaFormField", ($compile, $templateCa
       email: 'email'
       enum: 'enum'
     scope.formState = formController
-    template = $templateCache.get("#{scope.schema.type}Field.html")
+    template = $templateCache.get("#{typeTemplates[scope.schema.type]}Field.html")
     template = $templateCache.get("enumField.html") if scope.schema.enum?
     element.html template
     element.find("input").attr("type", "number") if (scope.schema.type == "number" or scope.schema.type == "integer")
