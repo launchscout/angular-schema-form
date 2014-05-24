@@ -9,11 +9,17 @@ angular.module("schemaForm").directive "schemaFormField", ($compile, $templateCa
     required: "="
     editAs: "@"
   link: (scope, element, attrs, formController)->
+    typeTemplates = 
+      bool: 'boolean'
+      boolean: 'boolean'
+      string: 'string'
+      number: 'string'
+      integer: 'string'
+      email: 'email'
+      enum: 'enum'
     scope.formState = formController
-    template = if scope.schema.enum?
-      $templateCache.get("enumField.html")
-    else
-      $templateCache.get("#{scope.schema.type}Field.html")
+    template = $templateCache.get("#{typeTemplates[scope.schema.type]}Field.html")
+    template = $templateCache.get("enumField.html") if scope.schema.enum?
     element.html template
     element.find("input").attr("type", "number") if (scope.schema.type == "number" or scope.schema.type == "integer")
     element.find("input").attr("ng-required", scope.required)
