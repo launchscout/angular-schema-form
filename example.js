@@ -3,7 +3,7 @@ var app = angular.module("app", ["schemaForm"]);
 app.controller("ExampleCtrl", function($scope) {
   $scope.schema =
 {
-  title: "Thing"
+  title: "Thing",
   type: "object",
   properties: {
     title: {
@@ -16,14 +16,26 @@ app.controller("ExampleCtrl", function($scope) {
       title: "Good?"
     },
     level: {
-      title: "Level",
       type: "string",
+      title: "Level",
       enum: ["low", "medium", "high"]
+    },
+    number: {
+      type: "number",
+      title: "What's your lucky number?",
+    },
+    integer: {
+      type: "integer",
+      title: "Integer too"
+    },
+    user_email: {
+      type: "email",
+      title: "Email por favor"
     }
   },
   required: ["title"]
 }
-  $scope.fields = ["title", "level", "good"]
+  $scope.fields = ["title", "level", "good", "number", "integer", "user_email"]
   $scope.model = {
     title: "Uncle John's Bathroom Reader",
     good: false
