@@ -17,6 +17,7 @@ So far, we support the following json schema types:
 * string
 * boolean
 * enum
+* integer
 * required
 * number
 * pattern

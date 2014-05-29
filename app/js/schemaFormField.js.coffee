@@ -12,11 +12,11 @@ angular.module("schemaForm").directive "schemaFormField", ($compile, $templateCa
     typeTemplates = 
       bool: 'boolean'
       boolean: 'boolean'
-      string: 'string'
-      number: 'string'
-      integer: 'string'
       email: 'email'
       enum: 'enum'
+      integer: 'string'
+      number: 'string'
+      string: 'string'
     scope.formState = formController
     template = $templateCache.get("#{typeTemplates[scope.schema.type]}Field.html")
     template = $templateCache.get("enumField.html") if scope.schema.enum?
