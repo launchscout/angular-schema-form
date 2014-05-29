@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "lib": {
+      "includeVendorInDistribution": false,
+      "generateBowerJson": true
+    }
+  }
+}

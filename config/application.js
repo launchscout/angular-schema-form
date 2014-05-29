@@ -16,17 +16,12 @@ module.exports = function(lineman) {
   var app = lineman.config.application;
   return {
 
-    concat: {
-      uncompressedDist: {
-        src: app.concat.uncompressedDist.src.concat("<%= files.ngtemplates.dest %>")
-      }
-    },
     ngtemplates: {
        options: {
          module: "schemaForm"
        }
      },
-     
+
      appendTasks: {
        dev: app.appendTasks.dev.concat("server")
      }
