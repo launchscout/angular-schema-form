@@ -28,3 +28,7 @@ We aim to eventually support:
 * link relations
 
 This directive outputs twitter bootstrap compatible markup. A [demo](http://gaslight.github.io/angular-schema-form/) is here.
+
+## License
+
+[MIT](LICENSE.md)
