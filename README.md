@@ -1,6 +1,6 @@
 # SchemaForm
 
-##Simple form building for angular.
+## Simple form building for angular.
 
 Schema form provides a couple directives for building forms
 given a [json schema](http://json-schema.org).
